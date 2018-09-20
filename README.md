@@ -14,7 +14,7 @@ Please cite:*xxxxxxxx*
 ---
 ### 2. Executing miRTIGO
 ####  2.1 Files required
-miRTIGO is written in R. In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in a sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
+In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in a sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
 
 1.**Input miRNA/mRNA file** is organized as follows:<br>
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
@@ -26,15 +26,23 @@ The first line contains the labels Name followed by the identifiers for each sam
 
 The remainder of the file contains data for each of the miRNAs/mRNAs. There is one line for each miRNA/mRNA.Each line contains the miRNA/mRNA name and a value for each sample in the dataset.<br>
 
-2.**Sample-to-sample file** generally contains three columns and is organized as follows:<br>
+2.**Sample-to-sample file** generally contains three columns, which shows the corresponding relationship of patient_ID, sample names in mirna expression file and mrna expression file. It is organized as follows:<br>
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
-The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br> 
-
+ 
 >Line format: `Name(tab)(sample name in miRNA file)(tab)(sample name in mRNA file)`<br>
 >Example: `Name	sample_1	sample_a`<br>
 
-The remainder of the file contains data for each of the mRNAs. There is one line for each mRNA.Each line contains the mRNA name and a value for each sample in the dataset.
-
 #### 2.2 Script Execution<br>
 
-refer to R
+miRTIGO is written in R.Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org/](https://www.r-project.org/) for details). [Our code](https://github.com/Henripan/Wepro/blob/master/Test1.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'EXECUTION'.And users only need to fill in their own files to the appropriate location in 'DATA INPUT' part.<br>
+
+
+`name_cancer = as.matrix(read.table("Sample-to-sample.txt", head = TRUE, sep = "\t"))`<br>
+`mirna_cancer = as.matrix(read.table("Input miRNA expression.txt", head = FALSE, sep = "\t"))`<br>
+`mrna_cancer = as.matrix(read.table("Input mRNA expression.txt", head = FALSE, sep = "\t"))`<br>
+`thres_num = 5000`<br>
+
+
+The 'thres_num' is the number of top rankers that users are interested in. By choosing 5000 miRTIGO will output the top 5000 ranked miRNA-mRNA interactions.<br>
+
+---
