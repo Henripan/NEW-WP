@@ -1,6 +1,7 @@
 # miRNA Target Inference by modeling Global molecular cOmpetition (miRTIGO) 
 <br>
-## Table of contents<br>
+
+## Table of contents
 1. Introduction<br>
 1.1 Purpose of the algorithm<br>
 1.2 Publication<br>
@@ -30,7 +31,7 @@ Please cite:*xxxxxxxx*
 ####  2.1 Files required
 In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in a sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
 
-1. **Input miRNA/mRNA file** is organized as follows:<br>
+1.**Input miRNA/mRNA file** is organized as follows:<br>
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
 
@@ -40,7 +41,7 @@ The first line contains the labels Name followed by the identifiers for each sam
 
 The remainder of the file contains data for each of the miRNAs/mRNAs. There is one line for each miRNA/mRNA.Each line contains the miRNA/mRNA name and a value for each sample in the dataset.<br>
 
-2. **Sample-to-sample file** generally contains three columns, which shows the corresponding relationship of patient_ID, sample names in mirna expression file and mrna expression file. It is organized as follows:<br>
+2.**Sample-to-sample file** generally contains three columns, which shows the corresponding relationship of patient_ID, sample names in mirna expression file and mrna expression file. It is organized as follows:<br>
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
  
 >Line format: `Name(tab)(sample name in miRNA file)(tab)(sample name in mRNA file)`<br>
@@ -62,14 +63,14 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 1. The codes to reproduce these experiments in this paper were written in R and should be executed in the corresponding software environment.<br> 
 2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'EXECUTION'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
 3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
->* Files for executing the algorithms<br>
+>* Files for executing the algorithms(BASIC DATA)<br>
 >>* wMRE_all.txt<br>
 >>* qMRE_all.txt<br>
 >>* conserved_qMRE.txt<br> 
 >>* mirna_list.txt<br>
 >>* mrna_list.txt<br>
 
->* Files for evaluation analyses<br>
+>* Files for evaluation analyses(EVALUDATION DATA)<br>
 >>* Validation sets<br>
 >>>* V1.txt<br>
 >>>* V2.txt<br>
@@ -82,7 +83,7 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 >>>* miRNA biomarkers.txt<br>
 >>>* Cancer genes.txt<br> 
 
->>* Input data files<br>
+>>* Input data files(INPUT DATA)<br>
 >>>* TCGA data
 >>>* NCI60 data
 	
