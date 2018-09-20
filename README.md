@@ -33,7 +33,7 @@ In order to run the current version of miRTIGO, the users should provide two dat
 
 1.**Input miRNA/mRNA file** is organized as follows:<br>
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
-![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
+![test](https://github.com/Henripan/Wepro/blob/master/input%20mRNA%20file.png)<br>
 
 The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br>
 >Line format: `Name(tab)(sample name in miRNA file)(tab)(sample name in mRNA file)`<br>
@@ -42,7 +42,7 @@ The first line contains the labels Name followed by the identifiers for each sam
 The remainder of the file contains data for each of the miRNAs/mRNAs. There is one line for each miRNA/mRNA.Each line contains the miRNA/mRNA name and a value for each sample in the dataset.<br>
 
 2.**Sample-to-sample file** generally contains three columns, which shows the corresponding relationship of patient_ID, sample names in mirna expression file and mrna expression file. It is organized as follows:<br>
-![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
+![test](https://github.com/Henripan/Wepro/blob/master/sample-to-sample.png)<br>
  
 >Line format: `Name(tab)(sample name in miRNA file)(tab)(sample name in mRNA file)`<br>
 >Example: `Name	sample_1	sample_a`<br>
