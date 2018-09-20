@@ -23,8 +23,6 @@ The first line contains the labels Name followed by the identifiers for each sam
 
 The remainder of the file contains data for each of the miRNAs/mRNAs. There is one line for each miRNA/mRNA.Each line contains the miRNA/mRNA name and a value for each sample in the dataset.<br>
 
-The remainder of the file contains data for each of the miRNAs/mRNAs. There is one line for each miRNA/mRNA.Each line contains the miRNA/mRNA name and a value for each sample in the dataset.<br>
-
 2.**Sample-to-sample file** generally contains three columns and is organized as follows:<br>
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
 The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br> 
