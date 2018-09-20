@@ -46,3 +46,25 @@ miRTIGO is written in R. Thus the users first need to download and install the R
 The 'thres_num' is the number of top rankers that users are interested in. By choosing 5000 miRTIGO will output the top 5000 ranked miRNA-mRNA interactions.<br>
 
 ---
+### 3. Reproduction of the miRTIGO paper`s experiments<br>
+1.The codes to reproduce these experiments in this paper were written in R and should be executed in the corresponding software environment.<br> 
+2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'EXECUTION'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
+3.Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
+	* Files for executing the algorithms<br>
+		* wMRE_all<br>
+		* qMRE_all<br>
+		* conserved_qMRE<br> 
+	* Files for evaluation analyses<br>
+		* Validation sets<br>
+			* V1<br>
+			* V2<br>
+			* V3<br>
+			* V4<br>
+			* V5<br>
+		* Cancer-related datasets<br>
+			* Oncomirs<br>
+			* clinical miRNA biomarkers<br>
+			* Cancer genes<br> 
+	* Input data files<br>
+ 
+All files listed above can be found in a compressed file [here]().
