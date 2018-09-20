@@ -51,23 +51,25 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'EXECUTION'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
 3.Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
 >* Files for executing the algorithms<br>
->>* wMRE_all<br>
->>* qMRE_all<br>
->>* conserved_qMRE<br> 
+>>* wMRE_all.txt<br>
+>>* qMRE_all.txt<br>
+>>* conserved_qMRE.txt<br> 
 
 >* Files for evaluation analyses<br>
 >>* Validation sets<br>
->>>* V1<br>
->>>* V2<br>
->>>* V3<br>
->>>* V4<br>
->>>* V5<br>
+>>>* V1.txt<br>
+>>>* V2.txt<br>
+>>>* V3.txt<br>
+>>>* V4.txt<br>
+>>>* V5.txt<br>
 
 >>* Cancer-related datasets<br>
->>>* Oncomirs<br>
->>>* clinical miRNA biomarkers<br>
->>>* Cancer genes<br> 
+>>>* Oncomirs.txt<br>
+>>>* clinical miRNA biomarkers.txt<br>
+>>>* Cancer genes.txt<br> 
 
 >>* Input data files<br>
+>>>* TCGA data
+>>>* NCI60 data
  
 All files listed above can be found in a compressed file [here]().
