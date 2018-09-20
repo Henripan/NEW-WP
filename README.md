@@ -34,7 +34,7 @@ The remainder of the file contains data for each of the miRNAs/mRNAs. There is o
 
 #### 2.2 Script Execution<br>
 
-miRTIGO is written in R.Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org/](https://www.r-project.org/) for details). [Our code](https://github.com/Henripan/Wepro/blob/master/Test1.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'EXECUTION'.And users only need to fill in their own files to the appropriate location in 'DATA INPUT' part.<br>
+miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org/](https://www.r-project.org/) for details). [Our code](https://github.com/Henripan/Wepro/blob/master/Test1.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'EXECUTION'.And users only need to fill in their own files to the appropriate location in 'DATA INPUT' part.<br>
 
 
 `name_cancer = as.matrix(read.table("Sample-to-sample.txt", head = TRUE, sep = "\t"))`<br>
