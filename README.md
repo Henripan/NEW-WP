@@ -2,7 +2,7 @@
 <br>
 
 ## Table of contents
-1. Introduction<br>
+1. [Introduction][1]<br>
 1.1 Purpose of the algorithm<br>
 1.2 Publication<br>
 1.3 Citation<br>
@@ -14,7 +14,7 @@
 
 
 ---
-### 1. Introduction
+### [1]1. Introduction
 miRTIGO is a novel miRNA target predictor, designed to identify sample-specific miRNA targets by  analyzing the same-sample miRNA-mRNA expression profiles. It decomposes the biological procedure behind miRNA targeting into two independent stages: contacting and binding. Approximating the contacting stage by a random collision model, and the efficiency of the binding stage by sequence matching scores of RNAs, miRTIGO models endogenous RNA competition explicitly in a global scale and outputs an miRTIGO signature matrix to measure the relative activity of each individual miRNA-mRNA interactions.
 
 #### 1.1 Purpose of this algorithm
@@ -77,29 +77,30 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 1. The codes to reproduce these experiments in this paper were written in R and should be executed in the corresponding software environment.<br> 
 2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'EXECUTION'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
 3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
->* Files for executing the algorithms(BASIC DATA)<br>
->>* wMRE_all.txt<br>
->>* qMRE_all.txt<br>
->>* conserved_qMRE.txt<br> 
->>* mirna_list.txt<br>
->>* mrna_list.txt<br>
 
->* Files for evaluation analyses(EVALUDATION DATA)<br>
->>* Validation sets<br>
->>>* V1.txt<br>
->>>* V2.txt<br>
->>>* V3.txt<br>
->>>* V4.txt<br>
->>>* V5.txt<br>
+* Files for executing the algorithms(BASIC DATA)<br>
+	* wMRE_all.txt<br>
+	* qMRE_all.txt<br>
+	* conserved_qMRE.txt<br> 
+	* mirna_list.txt<br>
+	* mrna_list.txt<br>
 
->>* Cancer-related datasets<br>
->>>* Oncomirs.txt<br>
->>>* miRNA biomarkers.txt<br>
->>>* Cancer genes.txt<br> 
+* Files for evaluation analyses(EVALUDATION DATA)<br>
+	* Validation sets<br>
+		* V1.txt<br>
+		* V2.txt<br>
+		* V3.txt<br>
+		* V4.txt<br>
+		* V5.txt<br>
 
->>* Input data files(INPUT DATA)<br>
->>>* TCGA data
->>>* NCI60 data
+	* Cancer-related datasets<br>
+		* Oncomirs.txt<br>
+		* miRNA biomarkers.txt<br>
+		* Cancer genes.txt<br> 
+
+* Input data files(INPUT DATA)<br>
+	* TCGA data
+	* NCI60 data
 	
 All files listed above can be found in a compressed file [here](). Detailed description of these files is provided in the Supplementary Note of the paper.<br>
 
