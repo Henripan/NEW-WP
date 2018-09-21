@@ -2,7 +2,7 @@
 <br>
 
 ## Table of contents
-1. [Introduction][1]<br>
+1. Introduction<br>
 1.1 Purpose of the algorithm<br>
 1.2 Publication<br>
 1.3 Citation<br>
@@ -14,7 +14,7 @@
 
 
 ---
-### [1]1. Introduction
+### 1. Introduction
 miRTIGO is a novel miRNA target predictor, designed to identify sample-specific miRNA targets by  analyzing the same-sample miRNA-mRNA expression profiles. It decomposes the biological procedure behind miRNA targeting into two independent stages: contacting and binding. Approximating the contacting stage by a random collision model, and the efficiency of the binding stage by sequence matching scores of RNAs, miRTIGO models endogenous RNA competition explicitly in a global scale and outputs an miRTIGO signature matrix to measure the relative activity of each individual miRNA-mRNA interactions.
 
 #### 1.1 Purpose of this algorithm
