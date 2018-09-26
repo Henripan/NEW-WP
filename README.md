@@ -87,11 +87,14 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 
 * Files for evaluation analyses(EVALUDATION DATA)<br>
 	* Validation sets<br>
-		* V1.txt<br>
-		* V2.txt<br>
-		* V3.txt<br>
-		* V4.txt<br>
-		* V5.txt<br>
+
+| Validation sets | Descriptions | MMI counts |
+| :-------------: |:-------------:| :-----:|
+| V1      | miRTarbase V7.0 | 380,639 |
+| V2     | starBase V2.0      |   26,009 |
+| V3 | miRTarbase strong+oncomiRDB+miRecords      |    9,642 |
+| V4 | miRNA transfection-supported | 22,325 |
+| V5 | CLASH-supported | 17,293 |
 
 	* Cancer-related datasets<br>
 		* Oncomirs.txt<br>
