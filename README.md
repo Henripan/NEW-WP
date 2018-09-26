@@ -78,39 +78,46 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'EXECUTION'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
 3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
 
-* Files for executing the algorithms(BASIC DATA)<br>
+* Files for executing the algorithms (BASIC DATA)<br>
 
 	| File Name | Descriptions | 
 	| :-------------: |:-------------| 
-	| wMRE\_all.txt | cumulative weighted context++ scores between an miRNA and mRNA |
+	| wMRE\_all.txt | _cumulative weighted context++ scores_ between an miRNA and mRNA |
 	| qMRE\_all.txt | number of target sites (MREs) on one mRNA for one miRNA |
-	| conserved\_qMRE.txt | number of conserved target sites (MREs) on one mRNA for one miRNA|
+	| conserved\_qMRE.txt | number of conserved target sites on one mRNA for one miRNA|
 	| mirna\_list.txt | miRNA identifiers |
 	| mrna\_list.txt | mRNA identifiers |
-All these files are compiled from TargetScan v7.0
 
-* Files for evaluation analyses(EVALUDATION DATA)<br>
-	* Experimentally validated miRNA-mRNA interactions<br>
+	All these files are compiled from TargetScan v7.0.
+
+
+
+* Files for evaluation analyses (EVALUATION DATA)<br>
+	* Experimentally confirmed miRNA-mRNA interactions (MMIs)<br>
 
 	| Datasets | Descriptions | MMI counts |
-	| :-------------: |:-------------:|:-----:|
-	| V1      | miRTarbase V7.0 | 380,639 |
-	| V2     | starBase V2.0      |   26,009 |
-	| V3 | miRTarbase strong+oncomiRDB+miRecords | 9,642 |
+	| :-------------: |:-------------:| :-----:|
+	| V1 | miRTarbase v7.0 | 380,639 |
+	| V2 | starBase v2.0 | 26,009 |
+	| V3 | miRTarbase strong v7.0+oncomiRDB+miRecords | 9,642 |
 	| V4 | miRNA transfection-supported | 22,325 |
 	| V5 | CLASH-supported | 17,293 |
 
-	* Cancer-related miRNAs and genes<br>
+	* Curated cancer-related miRNAs and genes<br>
 
 	| Datasets | Descriptions | Element counts |
-	| :-------------: |:-------------:|:-----:|
+	| :-------------: |:-------------:| :-----:|
 	| Oncomirs | MNDR v2.0 database (confidence score ≥ 0.9) | 399 |
 	| miRNA biomarkers | miRNAs that are significantly correlated with tumor development, tumor staging, tumor grade and patient survival | 288 |
 	| Cancer genes | COSMIC database | 616 |
 
-* Input data files(INPUT DATA)<br>
-	* TCGA data
-	* NCI60 data
+* Input data files (INPUT DATA)<br>
+
+	| Data | Descriptions |
+	| :-------------: |:-------------|
+	| TCGA data | Paired miRNA-mRNA expression profiles from a total of 7,991 tumor samples belonging to 32 different cancer types |
+	| NCI60 data | Paired miRNA-mRNA expression profiles from 130 samples belonging to 59 cell line types |
+
 	
 All files listed above can be found in a compressed file [here](). Detailed description of these files is provided in the Supplementary Note of the paper.<br>
 
