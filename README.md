@@ -99,7 +99,7 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 	* Cancer-related miRNAs and genes<br>
 
 	| Datasets | Descriptions | Element counts |
-	| :-------------: |:-------------|:-----:|
+	| :-------------: |:-------------:|:-----:|
 	| Oncomirs | MNDR v2.0 database (confidence score ≥ 0.9) | 399 |
 	| miRNA biomarkers | miRNAs that are significantly correlated with tumor development, tumor staging, tumor grade and patient survival | 288 |
 	| Cancer genes | COSMIC database | 616 |
