@@ -87,6 +87,7 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 	| conserved\_qMRE.txt | number of conserved target sites (MREs) on one mRNA for one miRNA|
 	| mirna\_list.txt | miRNA identifiers |
 	| mrna\_list.txt | mRNA identifiers |
+All these files are compiled from TargetScan v7.0
 
 * Files for evaluation analyses(EVALUDATION DATA)<br>
 	* Experimentally validated miRNA-mRNA interactions<br>
