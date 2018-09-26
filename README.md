@@ -79,11 +79,14 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
 
 * Files for executing the algorithms(BASIC DATA)<br>
-	* wMRE_all.txt<br>
-	* qMRE_all.txt<br>
-	* conserved_qMRE.txt<br> 
-	* mirna_list.txt<br>
-	* mrna_list.txt<br>
+
+	| File Name | Descriptions | 
+	| :-------------: |:-------------| 
+	| wMRE\_all.txt | cumulative weighted context++ scores between an miRNA and mRNA |
+	| qMRE\_all.txt | number of target sites (MREs) on one mRNA for one miRNA |
+	| conserved\_qMRE.txt | number of conserved target sites (MREs) on one mRNA for one miRNA|
+	| mirna\_list.txt | miRNA identifiers |
+	| mrna\_list.txt | mRNA identifiers |
 
 * Files for evaluation analyses(EVALUDATION DATA)<br>
 	* Experimentally validated miRNA-mRNA interactions<br>
@@ -92,7 +95,7 @@ The 'thres_num' is the number of top rankers that users are interested in. By ch
 	| :-------------: |:-------------:|:-----:|
 	| V1      | miRTarbase V7.0 | 380,639 |
 	| V2     | starBase V2.0      |   26,009 |
-	| V3 | miRTarbase strong+oncomiRDB+miRecords      |    9,642 |
+	| V3 | miRTarbase strong+oncomiRDB+miRecords | 9,642 |
 	| V4 | miRNA transfection-supported | 22,325 |
 	| V5 | CLASH-supported | 17,293 |
 
