@@ -3,14 +3,11 @@
 
 ## Table of contents
 1. Introduction<br>
-1.1 Purpose of the algorithm<br>
-1.2 Publication<br>
-1.3 Citation<br>
-2. Executing miRTIGO<br>
-2.1 Files required<br>
-2.2 Script Execution<br>
-3. Reproduction of the miRTIGO paper`s experiments<br>
-4. Contact
+2. Purpose of the algorithm<br>
+3. Executing miRTIGO<br>
+3.1 Files required<br>
+3.2 Script Execution<br>
+4. Reproduction of the miRTIGO paper`s experiments<br>
 
 
 
@@ -18,21 +15,17 @@
 ### 1. Introduction
 miRTIGO is a novel miRNA target predictor, designed to identify sample-specific miRNA targets by  analyzing the same-sample miRNA-mRNA expression profiles. It decomposes the biological procedure behind miRNA targeting into two independent stages: contacting and binding. Approximating the contacting stage by a random contact model, and the efficiency of the binding stage by sequence matching scores of RNAs, miRTIGO models endogenous RNA competition explicitly in a global scale and outputs an miRTIGO signature matrix to measure the relative activity of each individual miRNA-mRNA interactions.
 
-#### 1.1 Purpose of this algorithm
-miRTIGO was developed by professional oncologists and statisticians to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs. As a unique feature of miRTIGO, giving sample-specific predictions enables researchers to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when samples are limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells, exosome samples).
+---
+### 2. Purpose of this algorithm
+miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs. As a unique feature of miRTIGO, giving sample-specific predictions enables researchers to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when samples are limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells, exosome samples).
 
-#### 1.2 Publication
-The publication for miRTIGO can be found [here](http://www.cicams.ac.cn/)
-
-#### 1.3 citation
-Please cite:*xxxxxxxx*
 
 ---
-### 2. Executing miRTIGO
-####  2.1 Files required
+### 3. Executing miRTIGO
+####  3.1 Files required
 In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in a sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
 
-1.**Input miRNA/mRNA file** is organized as follows:<br>
+1.**Input miRNA file** is organized as follows:<br>
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
 
 The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br>
@@ -59,7 +52,7 @@ The first line must contain the label Names for samples in each expression datas
 
 The remainder of the file contains sample identifiers used in the miRNA and mRNA expression files. There is one line for each sample. Each line contains the identifiers for that sample.<br>
 
-#### 2.2 Script Execution<br>
+#### 3.2 Script Execution<br>
 
 miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/Henripan/Wepro/blob/master/Test1.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
 
@@ -80,7 +73,7 @@ Our algorithm provides both population-level result and sample-level result, and
 
 
 ---
-### 3. Reproduction of the miRTIGO paper`s experiments<br>
+### 4. Reproduction of the miRTIGO paper`s experiments<br>
 1. The codes to reproduce these experiments in this paper were written in R and should be executed in the corresponding software environment.<br> 
 2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'MAIN PROGRAM'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
 3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
@@ -126,5 +119,3 @@ Our algorithm provides both population-level result and sample-level result, and
 	
 All files listed above can be found in a compressed file [here](). Detailed description of these files is provided in the **Supplementary Note** of the paper.<br>
 
-### 4. Contact<br>
-For any problems with the execution of this code please contact us at wangpan@cicams.ac.cn
