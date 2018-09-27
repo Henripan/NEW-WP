@@ -2,13 +2,13 @@
 <br>
 
 ## Table of contents
-<a href="#1">1. Introduction</a><br>
-<a href="#2">2. Purpose of the algorithm</a><br>
-<a href="#3">3. Executing miRTIGO</a><br>
-<a href="#4">	3.1 Files required</a><br>
-<a href="#5">	3.2 Script Execution</a><br>
-<a href="#6">4. Reproduction of the miRTIGO paper`s experiments</a><br>
-<a href="#7">5. TCGA predicted results</a>
+1. <a href="#1">Introduction</a><br>
+2. <a href="#2">Purpose of the algorithm</a><br>
+3. <a href="#3">Executing miRTIGO</a><br>
+	3.1 <a href="#4">Files required</a><br>
+	3.2 <a href="#5">Script Execution</a><br>
+4. <a href="#6">Reproduction of the miRTIGO paper`s experiments</a><br>
+5. <a href="#7">TCGA predicted results</a>
 
 
 
