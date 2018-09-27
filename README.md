@@ -14,20 +14,20 @@
 
 ---
 ### <a name="1">1. Introduction</a>
-miRTIGO is a novel miRNA target predictor, designed to identify sample-specific miRNA targets by  analyzing the same-sample miRNA-mRNA expression profiles. It decomposes the biological procedure behind miRNA targeting into two independent stages: contacting and binding. Approximating the contacting stage by a random contact model, and the efficiency of the binding stage by sequence matching scores of RNAs, miRTIGO models endogenous RNA competition explicitly in a global scale and outputs an miRTIGO signature matrix to measure the relative activity of each individual miRNA-mRNA interactions.The figure below illustrates the rationale and workflow behind miRTIGO.<br>
+miRTIGO is a novel miRNA target predictor, designed to identify sample-specific miRNA targets by  analyzing the same-sample miRNA-mRNA expression profiles. It decomposes the biological procedure behind miRNA targeting into two independent stages: contacting and binding. Approximating the contacting stage by a random contact model, and the efficiency of the binding stage by sequence matching scores of RNAs, miRTIGO models endogenous RNA competition explicitly in a global scale and outputs an miRTIGO signature matrix to measure the relative activity of each individual miRNA-mRNA interaction.The figure below illustrates the rationale and workflow behind miRTIGO.<br>
 
 ![test](https://github.com/Henripan/NEW-WP/blob/master/Figure%201.jpg)<br>
 
 ---
 ### <a name="2">2. Purpose of this algorithm</a>
-miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs. As a unique feature of miRTIGO, giving sample-specific predictions enables researchers to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when samples are limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells, exosome samples).
+miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs. As a unique feature of miRTIGO, giving sample-specific predictions enables researchers to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when sample size is limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells, exosome samples).
 
 ---
 ### <a name="3">3. Executing miRTIGO</a>
 ####  <a name="4">3.1 Files required</a>
 In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in a sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
 
-1.**Input miRNA file** is organized as follows:<br>
+1. **Input miRNA file** is organized as follows:<br>
 
 | miRNA | TCGA-05-4384-01A-01T-1754-13 | TCGA-05-4390-01A-02T-1754-13 | TCGA-05-4396-01A-21H-1857-13 | TCGA-50-5066-01A-01T-1627-13|
 | :-------------: |:-------------:| :-----:| :-----:|:-----:|
@@ -43,7 +43,7 @@ The first line contains the labels Name followed by the identifiers for each sam
 
 The remainder of the file contains data for each of the miRNAs. There is one line for each miRNA. Each line contains the miRNA name and a value for each sample in the dataset.<br>
 
-2.**Input mRNA file** is organized as follows:<br>
+2. **Input mRNA file** is organized as follows:<br>
 
 | Gene | TCGA-05-4384-01 | TCGA-05-4390-01 | TCGA-05-4396-01 | TCGA-50-5066-01|
 | :-------------: |:-------------:| :-----:| :-----:|:-----:|
@@ -59,7 +59,7 @@ The first line contains the labels Name followed by the identifiers for each sam
 
 The remainder of the file contains data for each of the mRNAs. There is one line for each mRNA. Each line contains the mRNA name and a value for each sample in the dataset.<br>
 
-3.**Sample-to-sample file** generally contains two columns, which shows the corresponding relationship of the sample identifiers in mirna expression file and mrna expression file. It also serves as a index to denote which samples we choose to analyze. It is organized as follows:<br>
+3. **Sample-to-sample file** generally contains two columns, which shows the corresponding relationship of the sample identifiers in mirna expression file and mrna expression file. It also serves as a index to denote which samples we choose to analyze. It is organized as follows:<br>
 
 | miRNA | Gene | 
 | :-------------: |:-------------:| 
