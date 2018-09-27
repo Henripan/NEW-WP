@@ -16,7 +16,7 @@
 ### 1. Introduction
 miRTIGO is a novel miRNA target predictor, designed to identify sample-specific miRNA targets by  analyzing the same-sample miRNA-mRNA expression profiles. It decomposes the biological procedure behind miRNA targeting into two independent stages: contacting and binding. Approximating the contacting stage by a random contact model, and the efficiency of the binding stage by sequence matching scores of RNAs, miRTIGO models endogenous RNA competition explicitly in a global scale and outputs an miRTIGO signature matrix to measure the relative activity of each individual miRNA-mRNA interactions.The figure below illustrates the rationale and workflow behind miRTIGO.<br>
 
-![test](https://github.com/Henripan/Wepro/blob/master/Figure%201_cmyk.jpg)<br>
+![test](https://github.com/Henripan/NEW-WP/blob/master/Figure%201.jpg)<br>
 
 ---
 ### 2. Purpose of this algorithm
@@ -75,13 +75,13 @@ The first line must contain the label Names for samples in each expression datas
 The remainder of the file contains sample identifiers used in the miRNA and mRNA expression files. There is one line for each sample. Each line contains the identifiers for that sample.<br>
 
 #### 3.2 Script Execution<br>
-miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/Henripan/NEW-WP/blob/master/miRXXXX.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
+miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/Henripan/NEW-WP/blob/master/miRXXXX%20algorithm/miRXXXX.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
 
 >178 mrna = as.matrix(read.table("`mrna_list.txt`", head = TRUE, sep = "\t"))<br>
 >179 mirna = as.matrix(read.table("`mirna_list.txt`", head = TRUE, sep = "\t"))<br>
 >180 CWCS_matrix1 = as.matrix(read.table("`wMRE_all.txt`", head = TRUE, sep = "\t"))<br>
 
-Those three files serve as the basis to define the sequence matching scores between miRNAs and mRNAs, which are compiled from TargetScan and provided [here](https://github.com/Henripan/NEW-WP/tree/master/miRXXXX). 
+Those three files serve as the basis to define the sequence matching scores between miRNAs and mRNAs, which are compiled from TargetScan and provided [here](https://github.com/Henripan/NEW-WP/tree/master/miRXXXX%20algorithm). 
 
 >188 name\_cancer = as.matrix(read.table("`Sample-to-sample.txt`", head = TRUE, sep = "\t"))<br>
 >189 mirna\_cancer = as.matrix(read.table("`Input miRNA expression.txt`", head = FALSE, sep = "\t"))<br>
@@ -98,7 +98,7 @@ Those three files should be provided by the users, which contains the paired exp
 * Files for executing the algorithms<br>
 
 	| Data file | Descriptions | 
-	| :-------------: |:-------------| 
+	|:-------------:|:-------------| 
 	| wMRE\_all.txt | _cumulative weighted context++ scores_ between an miRNA and mRNA |
 	| qMRE\_all.txt | number of target sites (MREs) on one mRNA for one miRNA |
 	| conserved\_qMRE.txt | number of conserved target sites on one mRNA for one miRNA|
@@ -111,7 +111,7 @@ Those three files should be provided by the users, which contains the paired exp
 	* Experimentally confirmed miRNA-mRNA interactions (MMIs)<br>
 
 	| Data file | Descriptions | MMI counts |
-	| :-------------: |:-------------| :-----:|
+	|:-------------:|:-------------|:-----:|
 	| V1 | miRTarbase v7.0 | 380,639 |
 	| V2 | starBase v2.0 | 26,009 |
 	| V3 | miRTarbase strong v7.0+oncomiRDB+miRecords | 9,642 |
@@ -121,7 +121,7 @@ Those three files should be provided by the users, which contains the paired exp
 	* Curated cancer-related miRNAs and genes<br>
 
 	| Data file | Descriptions | Element counts |
-	| :-------------: |:-------------| :-----:|
+	|:-------------:|:-------------|:-----:|
 	| Oncomirs | compiled from MNDR v2.0 database | 399 |
 	| miRNA biomarkers | contains miRNAs that are significantly correlated with tumor development, tumor staging, tumor grade and patient survival | 288 |
 	| Cancer genes | downloaded from COSMIC database | 616 |
@@ -129,13 +129,12 @@ Those three files should be provided by the users, which contains the paired exp
 * Input data files<br>
 
 	| Data file| Descriptions |
-	| :-------------: |:-------------|
+	|:-------------: |:-------------|
 	| TCGA data | Paired miRNA-mRNA expression profiles from a total of 7,991 tumor samples belonging to 32 different cancer types |
 	| NCI60 data | Paired miRNA-mRNA expression profiles from 130 samples belonging to 59 cell line types |
 
 All data files listed above are provided in a compressed file [DATA.7z](https://pan.baidu.com/s/1HTNNQr9iohE-ht-Y1szucA). Detailed descriptions of these files are provided in the **Supplementary Note** of the paper.<br>
 
 ---
-### 5. TCGA predicted results<br>
-miRTIGO provides both population-level result and sample-level result, and it outputs the top 1% ranked MMIs in default. [Here](https://github.com/Henripan/NEW-WP/tree/master/TCXX%20predicted%20results) we provide the detailed population-level results of the top 5000 predicted MMIs obtained from the TCGA data compendium used in our study. 
-
+### 5. Examples of predicted results<br>
+miRTIGO provides both population-level result and sample-level result, and it outputs the top 1% ranked MMIs in default. To show as an example, [Here](https://github.com/Henripan/NEW-WP/tree/master/Predicted%20results) we provide the detailed population-level results of the top 5000 predicted MMIs for each of the 32 TCGA cancer types and the sample-level results of the top 5000 predictions for the NCI-60 cell panel.
