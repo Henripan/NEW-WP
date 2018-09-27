@@ -8,7 +8,7 @@
 	3.1 <a href="#4">Files required</a><br>
 	3.2 <a href="#5">Script Execution</a><br>
 4. <a href="#6">Reproduction of the miRTIGO paper`s experiments</a><br>
-5. <a href="#7">TCGA predicted results</a>
+5. <a href="#7">Examples of predicted results</a>
 
 
 
@@ -138,10 +138,3 @@ All data files listed above are provided in a compressed file [DATA.7z](https://
 ---
 ### <a name="7">5. Examples of predicted results</a><br>
 miRTIGO provides both population-level result and sample-level result, and it outputs the top 1% ranked MMIs in default. To show as an example, [Here](https://github.com/Henripan/NEW-WP/tree/master/Predicted%20results) we provide the detailed population-level results of the top 5000 predicted MMIs for each of the 32 TCGA cancer types and the sample-level results of the top 5000 predictions for the NCI-60 cell panel.
-
-
-
-
-
-
-
