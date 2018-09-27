@@ -87,7 +87,7 @@ Those three files serve as the basis to define the sequence matching scores betw
 >189 mirna\_cancer = as.matrix(read.table("`Input miRNA expression.txt`", head = FALSE, sep = "\t"))<br>
 >190 mrna\_cancer = as.matrix(read.table("`Input mRNA expression.txt`", head = FALSE, sep = "\t"))<br>
 
-Those three files should be provided by the users, which contains the paired expression profiles of miRNAs and mRNAs of the samples that they are interested in.   
+Those three files should be provided by the users, which contains the paired expression profiles of miRNAs and mRNAs of the samples that they are interested in. Note that the input miRNA/mRNA file should be a non-negative matrix, in order for the program to execute correctly.  
 
 ---
 ### 4. Reproduction of the miRTIGO paper`s experiments<br>
@@ -138,5 +138,4 @@ All data files listed above are provided in a compressed file [DATA.7z](https://
 ---
 ### 5. TCGA predicted results<br>
 miRTIGO provides both population-level result and sample-level result, and it outputs the top 1% ranked MMIs in default. [Here](https://github.com/Henripan/NEW-WP/tree/master/TCXX%20predicted%20results) we provide the detailed population-level results of the top 5000 predicted MMIs obtained from the TCGA data compendium used in our study. 
-
 
