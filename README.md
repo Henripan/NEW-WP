@@ -31,7 +31,7 @@ In order to run the current version of miRTIGO, the users should provide two dat
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
 
 	| miRNA | TCGA-05-4384-01A-01T-1754-13 | TCGA-05-4390-01A-02T-1754-13 | TCGA-05-4396-01A-21H-1857-13 | TCGA-50-5066-01A-01T-1627-13|
-	| :-------------: |:-------------:| :-----:| :-----:|
+	| :-------------: |:-------------:| :-----:| :-----:|:-----:|
 	| hsa-let-7a-5p | 19.0144019352802 | 16.2421134450244 | 19.2817036827951 | 18.072179718816 |
 	| hsa-let-7a-3p | 7.31288295528436 | 6.20945336562895 | 7.83920378809694 | 6.2667865406949 |
 	| hsa-let-7a-2-3p | 6.52356195605701 | 5.4594316186373 | 3.70043971814109 | 7.38370429247405 |
@@ -51,7 +51,7 @@ The remainder of the file contains data for each of the miRNAs. There is one lin
 ![test](https://github.com/Henripan/Wepro/blob/master/input%20mRNA%20file.png)<br>
 
 	| Gene | TCGA-05-4384-01 | TCGA-05-4390-01 | TCGA-05-4396-01 | TCGA-50-5066-01|
-	| :-------------: |:-------------:| :-----:| :-----:|
+	| :-------------: |:-------------:| :-----:| :-----:|-----:|
 	| AARS | 10.70943229 | 11.69327441 | 12.42829508 | 11.04643008 |
 	| AASDHPPT | 9.908138588 | 9.671621204 | 10.11131958 | 9.98327168 |
 	| AASDH | 7.94715708 | 7.289783756 | 8.321654408 | 7.627425906 |
@@ -68,7 +68,7 @@ The remainder of the file contains data for each of the mRNAs. There is one line
 ![test](https://github.com/Henripan/Wepro/blob/master/sample-to-sample.png)<br>
 
 	| miRNA | Gene | 
-	| :-------------: |:-------------| 
+	| :-------------: |:-------------:| 
 	| TCGA-50-5066-01A-01T-1627-13 | TCGA-50-5066-01 |
 	| TCGA-05-4384-01A-01T-1754-13 | TCGA-05-4384-01 |
 	| TCGA-05-4390-01A-02T-1754-13 | TCGA-05-4390-01 |
@@ -147,5 +147,11 @@ All data files listed above are provided in a compressed file [DATA.7z](). Detai
 ---
 ### 5. TCGA predicted results<br>
 miRTIGO provides both population-level result and sample-level result, and it outputs the top 5,000 ranked MMIs in default. [Here]() we provide the detailed population-level results obtained from the TCGA data compendium used in our study. 
+
+
+
+
+
+
 
 
