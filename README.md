@@ -5,8 +5,8 @@
 <a href="#1">1. Introduction</a><br>
 <a href="#2">2. Purpose of the algorithm</a><br>
 <a href="#3">3. Executing miRTIGO</a><br>
-	<a href="#4">3.1 Files required</a><br>
-	<a href="#5">3.2 Script Execution</a><br>
+<a href="#4">	3.1 Files required</a><br>
+<a href="#5">	3.2 Script Execution</a><br>
 <a href="#6">4. Reproduction of the miRTIGO paper`s experiments</a><br>
 <a href="#7">5. TCGA predicted results</a>
 
