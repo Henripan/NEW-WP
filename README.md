@@ -1,4 +1,4 @@
-# miRNA Target Inference by modeling Global molecular cOmpetition (miRTIGO) 
+# miRTIGO: miRNA Target Inference by modeling Global molecular cOmpetition
 <br>
 
 ## Table of contents
