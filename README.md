@@ -71,7 +71,7 @@ Those three files should be provided by the users, which contains the paired exp
 
 ---
 ### 4. Reproduction of the miRTIGO paper`s experiments<br>
-1. The codes to reproduce these experiments in this paper were written in R and should be executed in the corresponding software environment.<br> 
+1. The codes to reproduce these experiments in this paper are written in R and should be executed in the corresponding software environment.<br> 
 2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'MAIN PROGRAM'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
 3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
 
@@ -101,20 +101,20 @@ Those three files should be provided by the users, which contains the paired exp
 	* Curated cancer-related miRNAs and genes<br>
 
 	| Data file | Descriptions | Element counts |
-	| :-------------: |:-------------:| :-----:|
+	| :-------------: |:-------------| :-----:|
 	| Oncomirs | compiled from MNDR v2.0 database | 399 |
 	| miRNA biomarkers | contains miRNAs that are significantly correlated with tumor development, tumor staging, tumor grade and patient survival | 288 |
 	| Cancer genes | downloaded from COSMIC database | 616 |
 
 * Input data files<br>
 
-	| Data | Descriptions |
+	| Data file| Descriptions |
 	| :-------------: |:-------------|
 	| TCGA data | Paired miRNA-mRNA expression profiles from a total of 7,991 tumor samples belonging to 32 different cancer types |
 	| NCI60 data | Paired miRNA-mRNA expression profiles from 130 samples belonging to 59 cell line types |
 
 	
-All files listed above are compressed in one ZIP archive [DATA](). Detailed descriptions of these files are provided in the **Supplementary Note** of the paper.<br>
+All data files listed above are provided in a compressed file [DATA.7z](). Detailed descriptions of these files are provided in the **Supplementary Note** of the paper.<br>
 
 ---
 ### 5. TCGA predicted results<br>
