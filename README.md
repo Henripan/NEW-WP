@@ -28,7 +28,6 @@ miRTIGO was developed to help researchers with insufficient programing skills to
 In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in a sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
 
 1.**Input miRNA file** is organized as follows:<br>
-![test](https://github.com/Henripan/Wepro/blob/master/input%20miRNA%20file.png)<br>
 
 | miRNA | TCGA-05-4384-01A-01T-1754-13 | TCGA-05-4390-01A-02T-1754-13 | TCGA-05-4396-01A-21H-1857-13 | TCGA-50-5066-01A-01T-1627-13|
 | :-------------: |:-------------:| :-----:| :-----:|:-----:|
@@ -38,9 +37,6 @@ In order to run the current version of miRTIGO, the users should provide two dat
 | hsa-let-7b-5p | 16.9613140283806 | 15.5496944365338 | 17.8444238072634 | 16.9950715116303 |
 | hsa-let-7b-3p | 7.92481250360578 | 5.20945336562895 | 7.66533591718518 | 6.82017896241519 |
 
-
-
-
 The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br>
 >Line format: `Name(tab)(sample 1 name)(tab)(sample 2 name) (tab) ... (sample N name)`<br>
 >Example: `miRNAName	sample_1	sample_2	...	sample_n`<br>
@@ -48,7 +44,6 @@ The first line contains the labels Name followed by the identifiers for each sam
 The remainder of the file contains data for each of the miRNAs. There is one line for each miRNA. Each line contains the miRNA name and a value for each sample in the dataset.<br>
 
 2.**Input mRNA file** is organized as follows:<br>
-![test](https://github.com/Henripan/Wepro/blob/master/input%20mRNA%20file.png)<br>
 
 | Gene | TCGA-05-4384-01 | TCGA-05-4390-01 | TCGA-05-4396-01 | TCGA-50-5066-01|
 | :-------------: |:-------------:| :-----:| :-----:|:-----:|
@@ -60,12 +55,11 @@ The remainder of the file contains data for each of the miRNAs. There is one lin
 
 The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br>
 >Line format: `Name(tab)(sample 1 name)(tab)(sample 2 name) (tab) ... (sample N name)`<br>
->Example: `mRNAName	sample_a	sample_b	...	sample_m`<br>
+>Example: `GeneName	sample_a	sample_b	...	sample_m`<br>
 
 The remainder of the file contains data for each of the mRNAs. There is one line for each mRNA. Each line contains the mRNA name and a value for each sample in the dataset.<br>
 
 3.**Sample-to-sample file** generally contains two columns, which shows the corresponding relationship of the sample identifiers in mirna expression file and mrna expression file. It also serves as a index to denote which samples we choose to analyze. It is organized as follows:<br>
-![test](https://github.com/Henripan/Wepro/blob/master/sample-to-sample.png)<br>
 
 | miRNA | Gene | 
 | :-------------: |:-------------:| 
@@ -74,8 +68,6 @@ The remainder of the file contains data for each of the mRNAs. There is one line
 | TCGA-05-4390-01A-02T-1754-13 | TCGA-05-4390-01 |
 | TCGA-05-4396-01A-21H-1857-13 | TCGA-05-4396-01 |
 
-
-
 The first line must contain the label Names for samples in each expression dataset with the first column for miRNA and second column for mRNA. <br>
 >Line format: `(sample name in miRNA file)(tab)(sample name in mRNA file)`<br>
 >Example: `sample_1	sample_a`<br>
@@ -83,13 +75,13 @@ The first line must contain the label Names for samples in each expression datas
 The remainder of the file contains sample identifiers used in the miRNA and mRNA expression files. There is one line for each sample. Each line contains the identifiers for that sample.<br>
 
 #### 3.2 Script Execution<br>
-miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/Henripan/Wepro/blob/master/Test1.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
+miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/Henripan/NEW-WP/blob/master/miRXXXX.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
 
 >178 mrna = as.matrix(read.table("`mrna_list.txt`", head = TRUE, sep = "\t"))<br>
 >179 mirna = as.matrix(read.table("`mirna_list.txt`", head = TRUE, sep = "\t"))<br>
 >180 CWCS_matrix1 = as.matrix(read.table("`wMRE_all.txt`", head = TRUE, sep = "\t"))<br>
 
-Those three files serve as the basis to define the sequence matching scores between miRNAs and mRNAs, which are compiled from TargetScan and provided [here](https://github.com/Henripan/Wepro/blob/master/Test3.txt). 
+Those three files serve as the basis to define the sequence matching scores between miRNAs and mRNAs, which are compiled from TargetScan and provided [here](https://github.com/Henripan/NEW-WP/tree/master/miRXXXX). 
 
 >188 name\_cancer = as.matrix(read.table("`Sample-to-sample.txt`", head = TRUE, sep = "\t"))<br>
 >189 mirna\_cancer = as.matrix(read.table("`Input miRNA expression.txt`", head = FALSE, sep = "\t"))<br>
@@ -141,11 +133,10 @@ Those three files should be provided by the users, which contains the paired exp
 	| TCGA data | Paired miRNA-mRNA expression profiles from a total of 7,991 tumor samples belonging to 32 different cancer types |
 	| NCI60 data | Paired miRNA-mRNA expression profiles from 130 samples belonging to 59 cell line types |
 
-	
-All data files listed above are provided in a compressed file [DATA.7z](). Detailed descriptions of these files are provided in the **Supplementary Note** of the paper.<br>
+All data files listed above are provided in a compressed file [DATA.7z](https://pan.baidu.com/s/1HTNNQr9iohE-ht-Y1szucA). Detailed descriptions of these files are provided in the **Supplementary Note** of the paper.<br>
 
 ---
 ### 5. TCGA predicted results<br>
-miRTIGO provides both population-level result and sample-level result, and it outputs the top 5,000 ranked MMIs in default. [Here]() we provide the detailed population-level results obtained from the TCGA data compendium used in our study. 
+miRTIGO provides both population-level result and sample-level result, and it outputs the top 1% ranked MMIs in default. [Here](https://github.com/Henripan/NEW-WP/tree/master/TCXX%20predicted%20results) we provide the detailed population-level results of the top 5000 predicted MMIs obtained from the TCGA data compendium used in our study. 
 
 
