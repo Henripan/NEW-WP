@@ -92,7 +92,7 @@ Those three files should be provided by the users, which contains the paired exp
 ---
 ### <a name="6">4. Reproduction of the miRTIGO paper`s experiments</a><br>
 1. The codes to reproduce these experiments in this paper are written in R and should be executed in the corresponding software environment.<br> 
-2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'MAIN PROGRAM'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
+2. Generally, all these [codes](https://github.com/Henripan/NEW-WP/tree/master/R%20codes%20for%20experiments) are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'MAIN PROGRAM'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
 3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
 
 * Files for executing the algorithms<br>
