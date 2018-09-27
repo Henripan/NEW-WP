@@ -37,42 +37,42 @@ In order to run the current version of miRTIGO, the users should provide two dat
 	| hsa-let-7b-5p | 16.9613140283806 | 15.5496944365338 | 17.8444238072634 | 16.9950715116303 |
 	| hsa-let-7b-3p | 7.92481250360578 | 5.20945336562895 | 7.66533591718518 | 6.82017896241519 |
 
-	The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br>
-	>Line format: `Name(tab)(sample 1 name)(tab)(sample 2 name) (tab) ... (sample N name)`<br>
-	>Example: `miRNAName	sample_1	sample_2	...	sample_n`<br>
+The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br>
+>Line format: `Name(tab)(sample 1 name)(tab)(sample 2 name) (tab) ... (sample N name)`<br>
+>Example: `miRNAName	sample_1	sample_2	...	sample_n`<br>
 
-	The remainder of the file contains data for each of the miRNAs. There is one line for each miRNA. Each line contains the miRNA name and a value for each sample in the dataset.<br>
+The remainder of the file contains data for each of the miRNAs. There is one line for each miRNA. Each line contains the miRNA name and a value for each sample in the dataset.<br>
 
 2. **Input mRNA file** is organized as follows:<br>
 
-| Gene | TCGA-05-4384-01 | TCGA-05-4390-01 | TCGA-05-4396-01 | TCGA-50-5066-01|
-| :-------------: |:-------------:| :-----:| :-----:|:-----:|
-| AARS | 10.70943229 | 11.69327441 | 12.42829508 | 11.04643008 |
-| AASDHPPT | 9.908138588 | 9.671621204 | 10.11131958 | 9.98327168 |
-| AASDH | 7.94715708 | 7.289783756 | 8.321654408 | 7.627425906 |
-| AASS | 9.964902673 | 7.775210583 | 9.172307988 | 5.950624713 |
-| AATF | 9.952503787 | 9.538021465 | 9.367084237 | 8.437501997 |
+	| Gene | TCGA-05-4384-01 | TCGA-05-4390-01 | TCGA-05-4396-01 | TCGA-50-5066-01|
+	| :-------------: |:-------------:| :-----:| :-----:|:-----:|
+	| AARS | 10.70943229 | 11.69327441 | 12.42829508 | 11.04643008 |
+	| AASDHPPT | 9.908138588 | 9.671621204 | 10.11131958 | 9.98327168 |
+	| AASDH | 7.94715708 | 7.289783756 | 8.321654408 | 7.627425906 |
+	| AASS | 9.964902673 | 7.775210583 | 9.172307988 | 5.950624713 |
+	| AATF | 9.952503787 | 9.538021465 | 9.367084237 | 8.437501997 |
 
-The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br>
->Line format: `Name(tab)(sample 1 name)(tab)(sample 2 name) (tab) ... (sample N name)`<br>
->Example: `GeneName	sample_a	sample_b	...	sample_m`<br>
+	The first line contains the labels Name followed by the identifiers for each sample in the dataset. <br>
+	>Line format: `Name(tab)(sample 1 name)(tab)(sample 2 name) (tab) ... (sample N name)`<br>
+	>Example: `GeneName	sample_a	sample_b	...	sample_m`<br>
 
-The remainder of the file contains data for each of the mRNAs. There is one line for each mRNA. Each line contains the mRNA name and a value for each sample in the dataset.<br>
+	The remainder of the file contains data for each of the mRNAs. There is one line for each mRNA. Each line contains the mRNA name and a value for each sample in the dataset.<br>
 
 3. **Sample-to-sample file** generally contains two columns, which shows the corresponding relationship of the sample identifiers in mirna expression file and mrna expression file. It also serves as a index to denote which samples we choose to analyze. It is organized as follows:<br>
 
-| miRNA | Gene | 
-| :-------------: |:-------------:| 
-| TCGA-50-5066-01A-01T-1627-13 | TCGA-50-5066-01 |
-| TCGA-05-4384-01A-01T-1754-13 | TCGA-05-4384-01 |
-| TCGA-05-4390-01A-02T-1754-13 | TCGA-05-4390-01 |
-| TCGA-05-4396-01A-21H-1857-13 | TCGA-05-4396-01 |
+	| miRNA | Gene | 
+	| :-------------: |:-------------:| 
+	| TCGA-50-5066-01A-01T-1627-13 | TCGA-50-5066-01 |
+	| TCGA-05-4384-01A-01T-1754-13 | TCGA-05-4384-01 |
+	| TCGA-05-4390-01A-02T-1754-13 | TCGA-05-4390-01 |
+	| TCGA-05-4396-01A-21H-1857-13 | TCGA-05-4396-01 |
 
-The first line must contain the label Names for samples in each expression dataset with the first column for miRNA and second column for mRNA. <br>
->Line format: `(sample name in miRNA file)(tab)(sample name in mRNA file)`<br>
->Example: `sample_1	sample_a`<br>
+	The first line must contain the label Names for samples in each expression dataset with the first column for miRNA and second column for mRNA. <br>
+	>Line format: `(sample name in miRNA file)(tab)(sample name in mRNA file)`<br>
+	>Example: `sample_1	sample_a`<br>
 
-The remainder of the file contains sample identifiers used in the miRNA and mRNA expression files. There is one line for each sample. Each line contains the identifiers for that sample.<br>
+	The remainder of the file contains sample identifiers used in the miRNA and mRNA expression files. There is one line for each sample. Each line contains the identifiers for that sample.<br>
 
 #### <a name="5">3.2 Script Execution</a><br>
 miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/Henripan/NEW-WP/blob/master/miRXXXX%20algorithm/miRXXXX.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
