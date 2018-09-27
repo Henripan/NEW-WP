@@ -1,4 +1,4 @@
-# miRTIGO: <u>miR</u>NA <u>T</u>arget <u>I</u>nference by modeling <u>G</u>lobal molecular c<u>O</u>mpetition
+# miRTIGO: miRNA Target Inference by modeling Global molecular cOmpetition
 <br>
 
 ## Table of contents
