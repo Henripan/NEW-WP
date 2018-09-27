@@ -3,12 +3,12 @@
 
 ## Table of contents
 <a href="#1">1. Introduction</a><br>
-2. Purpose of the algorithm<br>
-3. Executing miRTIGO<br>
-3.1 Files required<br>
-3.2 Script Execution<br>
-4. Reproduction of the miRTIGO paper`s experiments<br>
-5. TCGA predicted results
+<a href="#2">2. Purpose of the algorithm</a><br>
+<a href="#3">3. Executing miRTIGO</a><br>
+<a href="#4">3.1 Files required</a><br>
+<a href="#5">3.2 Script Execution</a><br>
+<a href="#6">4. Reproduction of the miRTIGO paper`s experiments</a><br>
+<a href="#7">5. TCGA predicted results</a>
 
 
 
@@ -19,12 +19,12 @@ miRTIGO is a novel miRNA target predictor, designed to identify sample-specific 
 ![test](https://github.com/Henripan/NEW-WP/blob/master/Figure%201.jpg)<br>
 
 ---
-### 2. Purpose of this algorithm
+### <a name="2">2. Purpose of this algorithm</a>
 miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs. As a unique feature of miRTIGO, giving sample-specific predictions enables researchers to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when samples are limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells, exosome samples).
 
 ---
-### 3. Executing miRTIGO
-####  3.1 Files required
+### <a name="3">3. Executing miRTIGO</a>
+####  <a name="4">3.1 Files required</a>
 In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in a sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
 
 1.**Input miRNA file** is organized as follows:<br>
@@ -74,7 +74,7 @@ The first line must contain the label Names for samples in each expression datas
 
 The remainder of the file contains sample identifiers used in the miRNA and mRNA expression files. There is one line for each sample. Each line contains the identifiers for that sample.<br>
 
-#### 3.2 Script Execution<br>
+#### <a name="5">3.2 Script Execution</a><br>
 miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/Henripan/NEW-WP/blob/master/miRXXXX%20algorithm/miRXXXX.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
 
 >178 mrna = as.matrix(read.table("`mrna_list.txt`", head = TRUE, sep = "\t"))<br>
@@ -90,7 +90,7 @@ Those three files serve as the basis to define the sequence matching scores betw
 Those three files should be provided by the users, which contains the paired expression profiles of miRNAs and mRNAs of the samples that they are interested in. Note that the input miRNA/mRNA file should be a non-negative matrix, in order for the program to execute correctly.  
 
 ---
-### 4. Reproduction of the miRTIGO paper`s experiments<br>
+### <a name="6">4. Reproduction of the miRTIGO paper`s experiments</a><br>
 1. The codes to reproduce these experiments in this paper are written in R and should be executed in the corresponding software environment.<br> 
 2. Generally, all these codes are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'MAIN PROGRAM'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
 3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
@@ -136,5 +136,12 @@ Those three files should be provided by the users, which contains the paired exp
 All data files listed above are provided in a compressed file [DATA.7z](https://pan.baidu.com/s/1HTNNQr9iohE-ht-Y1szucA). Detailed descriptions of these files are provided in the **Supplementary Note** of the paper.<br>
 
 ---
-### 5. Examples of predicted results<br>
+### <a name="7">5. Examples of predicted results</a><br>
 miRTIGO provides both population-level result and sample-level result, and it outputs the top 1% ranked MMIs in default. To show as an example, [Here](https://github.com/Henripan/NEW-WP/tree/master/Predicted%20results) we provide the detailed population-level results of the top 5000 predicted MMIs for each of the 32 TCGA cancer types and the sample-level results of the top 5000 predictions for the NCI-60 cell panel.
+
+
+
+
+
+
+
