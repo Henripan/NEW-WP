@@ -1,1 +1,1 @@
-the detailed population-level results of the top 5000 predicted MMIs for each of the 32 TCGA cancer types and the sample-level results of the top 5000 predictions for the NCI-60 cell panel.
+Here we provide the detailed population-level results of the top 5000 predicted miRNA-mRNA interactions for each of the 32 TCGA cancer types and the sample-level results of the top 5000 predictions for the 59 cancer cell lines from th NCI-60 cell panel.
