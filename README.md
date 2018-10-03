@@ -20,7 +20,7 @@ miRTIGO is a novel miRNA target predictor, designed to identify sample-specific 
 
 ---
 ### <a name="2">2. Purpose of this algorithm</a>
-miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs. As a unique feature of miRTIGO, giving sample-specific predictions enables researchers to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when sample size is limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells, exosome samples).
+miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs. a to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when sample size is limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells, exosome samples).
 
 ---
 ### <a name="3">3. Executing miRTIGO</a>
