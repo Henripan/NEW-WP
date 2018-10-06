@@ -20,7 +20,7 @@ miRTIGO is a novel miRNA target predictor, designed to identify sample-specific 
 
 ---
 ### <a name="2">2. Purpose of this algorithm</a>
-miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs. a to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when sample size is limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells, exosome samples).
+miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when sample size is limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells).
 
 ---
 ### <a name="3">3. Executing miRTIGO</a>
@@ -75,19 +75,19 @@ In order to run the current version of miRTIGO, the users should provide two dat
 	The remainder of the file contains sample identifiers used in the miRNA and mRNA expression files. There is one line for each sample. Each line contains the identifiers for that sample.<br>
 
 #### <a name="5">3.2 Script Execution</a><br>
-miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/Henripan/NEW-WP/blob/master/miRXXXX%20algorithm/miRXXXX.txt) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
+miRTIGO is written in R. Thus the users first need to download and install the R software on the platform (refer to [https://www.r-project.org](https://www.r-project.org/) for details). [The code](https://github.com/PANWANG2014/miRTIGO/blob/master/miRTIGO%20algorithm/miRTIGO.R) of miRTIGO consists of three parts, namely, 'FUNCTIONS', 'DATA INPUT' and 'MAIN PROGRAM'. The users only need to focus on the 'DATA INPUT' part and fill in the relevant files described as follows:<br>
 	
 >178 mrna = as.matrix(read.table("`mrna_list.txt`", head = TRUE, sep = "\t"))<br>
 >179 mirna = as.matrix(read.table("`mirna_list.txt`", head = TRUE, sep = "\t"))<br>
 >180 CWCS_matrix1 = as.matrix(read.table("`wMRE_all.txt`", head = TRUE, sep = "\t"))<br>
 
-Those three files serve as the basis to define the sequence matching scores between miRNAs and mRNAs, which are compiled from TargetScan and provided [here](https://github.com/Henripan/NEW-WP/tree/master/miRXXXX%20algorithm). 
+Those three files serve as the basis to define the sequence matching scores between miRNAs and mRNAs, which are compiled from TargetScan and provided [here](https://github.com/PANWANG2014/miRTIGO/blob/master/miRTIGO%20algorithm/Sequence%20matching%20scores.7z). 
 	
 >188 name\_cancer = as.matrix(read.table("`Sample-to-sample.txt`", head = TRUE, sep = "\t"))<br>
 >189 mirna\_cancer = as.matrix(read.table("`Input miRNA expression.txt`", head = FALSE, sep = "\t"))<br>
 >190 mrna\_cancer = as.matrix(read.table("`Input mRNA expression.txt`", head = FALSE, sep = "\t"))<br>
 
-Those three files should be provided by the users, which contains the paired expression profiles of miRNAs and mRNAs of the samples that they are interested in. Note that the input miRNA/mRNA file should be a non-negative matrix, in order for the program to execute correctly.  
+Those three files should be provided by the users, which contains the paired expression profiles of miRNAs and mRNAs of the samples that they are interested in. Note that the input miRNA/mRNA file should be transformed into a non-negative matrix, in order for the program to execute correctly.  
 
 ---
 ### <a name="6">4. Reproduction of the miRTIGO paper`s experiments</a><br>
@@ -133,7 +133,7 @@ Those three files should be provided by the users, which contains the paired exp
 	| TCGA data | Paired miRNA-mRNA expression profiles from a total of 7,991 tumor samples belonging to 32 different cancer types |
 	| NCI60 data | Paired miRNA-mRNA expression profiles from 130 samples belonging to 59 cell line types |
 
-	All data files listed above are provided in a compressed file [DATA.7z](https://www.dropbox.com/s/on728lzatdqpsua/DATA.7z?dl=0). Detailed descriptions of these files are provided in the **Supplementary Note** of the paper.<br>
+	All data files listed above are provided in a compressed file [DATA.7z](https://www.dropbox.com/s/on728lzatdqpsua/DATA.7z?dl=0). Detailed descriptions of these files are provided in the **Online Methods** of the paper.<br>
 
 ---
 ### <a name="7">5. Examples of predicted results</a><br>
