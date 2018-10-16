@@ -99,8 +99,8 @@ Those three files should be provided by the users, which contains the paired exp
 
 	| Data file | Descriptions | 
 	|:-------------:|:-------------| 
-	| wMRE\_all.txt | _cumulative weighted context++ scores_ between an miRNA and mRNA |
-	| qMRE\_all.txt | number of target sites (miRNA response elements, MREs) on one mRNA for one miRNA |
+	| wMRE\_all.txt | _cumulative weighted context++ scores_ (weighted miRNA response elements, wMRE) between an miRNA and mRNA |
+	| qMRE\_all.txt | number of target sites (quantitative miRNA response elements, qMREs) on one mRNA for one miRNA |
 	| conserved\_qMRE.txt | number of conserved target sites on one mRNA for one miRNA|
 	| mirna\_list.txt | miRNA identifiers used in the above files|
 	| mrna\_list.txt | mRNA identifiers used in the above files|
