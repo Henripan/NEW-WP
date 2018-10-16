@@ -14,18 +14,18 @@
 
 ---
 ### <a name="1">1. Introduction</a>
-miRTIGO is a novel miRNA target predictor, designed to identify sample-specific miRNA targets by  analyzing the same-sample miRNA-mRNA expression profiles. It decomposes the biological procedure behind miRNA targeting into two independent stages: contacting and binding. Approximating the contacting stage by a random contact model, and the efficiency of the binding stage by sequence matching scores of RNAs, miRTIGO models endogenous RNA competition explicitly in a global scale and outputs an miRTIGO signature matrix to measure the relative activity of each individual miRNA-mRNA interaction.The figure below illustrates the rationale and workflow behind miRTIGO.<br>
+miRTIGO is a novel miRNA target predictor, designed to identify sample-specific miRNA targets by  analyzing the same-sample miRNA-mRNA expression profiles. It decomposes the biological procedure of miRNA targeting into two independent stages: contacting and binding. By approximating the contacting stage by a random contact model, and the efficiency of the binding stage by sequence matching scores of RNAs, miRTIGO models endogenous RNA competition explicitly on a global scale and outputs an miRTIGO signature matrix to measure the relative activity of each individual miRNA-mRNA interaction (MMI).The figure below illustrates the rationale and workflow underlying miRTIGO.<br>
 
 ![test](https://github.com/Henripan/NEW-WP/blob/master/Figure%201.jpg)<br>
 
 ---
 ### <a name="2">2. Purpose of this algorithm</a>
-miRTIGO was developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when sample size is limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells).
+miRTIGO is developed to help researchers with insufficient programing skills to efficiently and accurately identify context-specific targets for miRNAs to explore the biological mechanisms of the miRNA-mediated post-transcriptional regulatory network when sample size is limited (e.g. rare tumor samples) or even in individual samples (e.g. single cells).
 
 ---
 ### <a name="3">3. Executing miRTIGO</a>
 ####  <a name="4">3.1 Files required</a>
-In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in a sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
+In order to run the current version of miRTIGO, the users should provide two data files describing the expression levels of each miRNA and mRNA in the same sample, respectively. And one additional file describing the correspondence of samples between the miRNA and mRNA data files. All files are tab-delimited ASCII text files and must comply with the following specifications:
 
 1. **Input miRNA file** is organized as follows:<br>
 
@@ -87,13 +87,13 @@ Those three files serve as the basis to define the sequence matching scores betw
 >189 mirna\_cancer = as.matrix(read.table("`Input miRNA expression.txt`", head = FALSE, sep = "\t"))<br>
 >190 mrna\_cancer = as.matrix(read.table("`Input mRNA expression.txt`", head = FALSE, sep = "\t"))<br>
 
-Those three files should be provided by the users, which contains the paired expression profiles of miRNAs and mRNAs of the samples that they are interested in. Note that the input miRNA/mRNA file should be transformed into a non-negative matrix, in order for the program to execute correctly.  
+Those three files should be provided by the users, which contains the paired expression profiles of miRNAs and mRNAs of the samples that they are interested in. Note that the input miRNA/mRNA file should be transformed into a non-negative matrix, in order for the main program to execute correctly.  
 
 ---
 ### <a name="6">4. Reproduction of the miRTIGO paper`s experiments</a><br>
 1. The codes to reproduce these experiments in this paper are written in R and should be executed in the corresponding software environment.<br> 
 2. Generally, all these [codes](https://github.com/Henripan/NEW-WP/tree/master/R%20codes%20for%20experiments) are arranged into three parts as 'FUNCTIONS', 'INPUT DATA' and 'MAIN PROGRAM'. The users need to download and fill in the relevant input files before implementing corresponding analyses.<br>
-3. Files required for the reproduction of the experiments can be broadly divided into three categories:<br>
+3. Files required for the reproduction of the experiments can be broadly classified into three categories:<br>
 
 * Files for executing the algorithms<br>
 
@@ -108,16 +108,17 @@ Those three files should be provided by the users, which contains the paired exp
 	All these files are compiled from [TargetScan v7.0](http://www.targetscan.org/cgi-bin/targetscan/data_download.cgi?db=vert_70).
 
 * Files for evaluation analyses<br>
-	* Experimentally confirmed miRNA-mRNA interactions (MMIs)<br>
+	* Experimentally confirmed MMIs<br>
 
 	| Data file | Descriptions | MMI counts |
 	|:-------------:|:-------------|:-----:|
 	| V1 | Tarbase v7.0 | 307,010 |
-        | V2 | miRTarbase v7.0 | 380,639 |
+    | V2 | miRTarbase v7.0 | 380,639 |
 	| V3 | starBase v2.0 | 26,009 |
 	| V4 | strong evidence-supported | 9,642 |
 	| V5 | miRNA transfection-supported | 22,325 |
 	| V6 | CLASH-supported | 17,293 |
+
 
 	* Curated cancer-related miRNAs and genes<br>
 
@@ -134,7 +135,7 @@ Those three files should be provided by the users, which contains the paired exp
 	| TCGA data | Paired miRNA-mRNA expression profiles from a total of 7,991 tumor samples belonging to 32 different cancer types |
 	| NCI60 data | Paired miRNA-mRNA expression profiles from 130 samples belonging to 59 cell line types |
 
-	All data files listed above are provided in a compressed file [DATA.7z](https://www.dropbox.com/s/on728lzatdqpsua/DATA.7z?dl=0). Detailed descriptions of these files are provided in the **Online Methods** of the paper.<br>
+	All data files listed above are provided in a compressed file [DATA.7z](https://www.dropbox.com/sh/aa0k59j39nftmo9/AAALFIiSpicrAEn8nRUJRjUWa?dl=0). Detailed descriptions of these files are provided in the **Online Methods** of the paper.<br>
 
 ---
 ### <a name="7">5. Examples of predicted results</a><br>
