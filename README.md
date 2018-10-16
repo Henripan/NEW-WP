@@ -112,11 +112,12 @@ Those three files should be provided by the users, which contains the paired exp
 
 	| Data file | Descriptions | MMI counts |
 	|:-------------:|:-------------|:-----:|
-	| V1 | miRTarbase v7.0 | 380,639 |
-	| V2 | starBase v2.0 | 26,009 |
-	| V3 | miRTarbase strong v7.0+oncomiRDB+miRecords | 9,642 |
-	| V4 | miRNA transfection-supported | 22,325 |
-	| V5 | CLASH-supported | 17,293 |
+	| V1 | Tarbase v7.0 | 307,010 |
+        | V2 | miRTarbase v7.0 | 380,639 |
+	| V3 | starBase v2.0 | 26,009 |
+	| V4 | strong evidence-supported | 9,642 |
+	| V5 | miRNA transfection-supported | 22,325 |
+	| V6 | CLASH-supported | 17,293 |
 
 	* Curated cancer-related miRNAs and genes<br>
 
